@@ -4,11 +4,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title> Home Page </title>
+        <title> About </title>
       </Head>
       <div className="flex justify-center items-center h-full box-border">
         <div className="w-10/12  bg-teal-500 h-5/6 rounded-md text-center text-white shadow-md">
-          <h1 className="font-semibold text-4xl mt-20"> Home Page</h1>
+          <h1 className="font-semibold text-4xl mt-20"> About</h1>
           <div className="bg-gray-200 h-0.5 mx-auto w-5/6 mt-8"></div>
           <div className="px-28 mt-10 text-lg">
             <p>
