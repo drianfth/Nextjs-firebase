@@ -3,9 +3,11 @@ import Input from "../../components/Input";
 import TextArea from "../../components/TextArea";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
+import { useRouter } from "next/router";
 
 const Add = () => {
   const phonesCollectionRef = collection(db, "phones");
+  const router = useRouter();
 
   const addPhone = async () => {
     await addDoc(phonesCollectionRef, {
@@ -36,6 +38,7 @@ const Add = () => {
     e.preventDefault();
     addPhone();
     setPhone(initializePhone);
+    router.push("/phones/");
   };
 
   return (
@@ -94,7 +97,6 @@ const Add = () => {
               </div>
             </div>
           </form>
-
         </div>
       </div>
     </div>
